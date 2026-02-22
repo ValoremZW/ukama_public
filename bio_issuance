@@ -1,0 +1,33 @@
+Bio Issuance Schedule
+Assumptions (made explicit):
+
+Base unit = season (end of summer / end of winter).
+
+Stage 1 issuance 𝐼1​  = 1,000,000 BIO.
+
+Inverse Fibonacci tightening governs maximum issuance per qualifying window.
+
+Use α = 1 (tail emissions preserved).
+
+Issuance only occurs if PoP and PoR state machines qualify at the end of the window. What follows is capacity, not entitlement.
+
+**Issuance schedule (inverse Fibonacci, seasonal base unit)**
+
+- Base time unit: 1 season (end of summer / end of winter)
+- Stage 1 issuance: 1000000 BIO
+- Tightening rule: inverse Fibonacci (α = 1, tail emissions preserved)
+- Qualification: uninterrupted ecological continuity across the full window
+- Failure handling: failed intervals reset the window; no deferral or compensation
+
+| Stage | Window (W_k) (seasons) | Approx years | Issuance multiplier | Max BIO issuable | Cumulative BIO |
+|------:|------------------------:|-------------:|--------------------:|-----------------:|---------------:|
+| 1     | 1                       | 0.5          | 1.000               | 1000000          | 1000000        |
+| 2     | 2                       | 1.0          | 0.500               | 500000           | 1500000        |
+| 3     | 3                       | 1.5          | 0.667               | 333333           | 1833333        |
+| 4     | 5                       | 2.5          | 0.600               | 200000           | 2033333        |
+| 5     | 8                       | 4.0          | 0.625               | 125000           | 2158333        |
+| 6     | 13                      | 6.5          | 0.615               | 76923            | 2235256        |
+| 7     | 21                      | 10.5         | 0.619               | 47619            | 2282875        |
+| 8     | 34                      | 17.0         | 0.618               | 29412            | 2312287        |
+| 9     | 55                      | 27.5         | 0.618               | 18182            | 2330469        |
+| 10    | 89                      | 44.5         | 0.618               | 11236            | 2341705        |
