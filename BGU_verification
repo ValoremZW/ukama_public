@@ -1,0 +1,347 @@
+# Pentad-based BGU (P-BGU) Deterministic Evaluator v1.0
+# Modes: PoP (Protection) or PoR (Regeneration)
+# Outcomes: PASS | FAIL | PAUSE
+# Doctrine: default-to-fail; ambiguity never resolves in favor of continuity unless explicitly permitted in advance.
+
+# ---------------------------------------------------------
+# 0) Types
+# ---------------------------------------------------------
+enum Mode { PoP, PoR }
+enum Outcome { PASS, FAIL, PAUSE }
+enum WitnessClass { MW, IW, CW }
+enum AmbiguityRule { FAIL, PAUSE_IF_DECLARED, ALLOW_PASS_IF_CORROB_GT_N }
+
+struct PentadWindow:
+  year: int
+  pentad_id: int
+  t_open: datetime
+  t_close: datetime
+  source_ref: string
+  hash: bytes32
+
+struct SDR: # Stress Declaration Record
+  site_id: string
+  mode: Mode
+  year: int
+  pentad_id: int
+  stress_type: string
+  stress_parameters: json
+  restraint_parameters: json
+  site_polygon: geojson
+  declared_by_role: string
+  declared_by_id: string
+  declared_at: datetime
+  signature: string
+  hash: bytes32
+
+struct WitnessRecord:
+  wr_id: string
+  site_id: string
+  mode: Mode
+  year: int
+  pentad_id: int
+  witness_class: WitnessClass
+  source_type: string
+  captured_at: datetime
+  location: geojson_point?  # optional
+  site_binding: string      # in_polygon|device_bound|route_bound|unknown
+  payload_hash: bytes32
+  author_role: string
+  author_or_device_id: string
+  independence_tags: json
+  signature: string
+
+struct Indicator:
+  indicator_id: string
+  mode: Mode
+  hard_fail_condition: json_logic     # deterministic predicate
+  ambiguity_rule: AmbiguityRule
+  allow_pass_corrob_threshold: int?   # only if ambiguity_rule == ALLOW_PASS_IF_CORROB_GT_N
+  required_witness_classes: set[WitnessClass]
+
+struct SBIS:
+  site_id: string
+  version: string
+  indicators: list[Indicator]
+
+struct MWP:
+  site_id: string
+  mode: Mode
+  mw_min: int
+  iw_min: int
+  cw_min: int
+  grace_window_hours: int
+  independence_rules: json_logic
+
+struct Contradiction:
+  a_wr_id: string
+  b_wr_id: string
+  type: string
+  resolution: string  # resolved|unresolved
+
+struct IndicatorResult:
+  indicator_id: string
+  status: string # ok|hard_fail|ambiguous
+  supporting_wr_ids: list[string]
+
+struct OutcomeRecord:
+  site_id: string
+  mode: Mode
+  year: int
+  pentad_id: int
+  t_open: datetime
+  t_close: datetime
+  t_eval: datetime
+  sdr_hash: bytes32?
+  evidence_root_hash: bytes32?
+  mw_count: int
+  iw_count: int
+  cw_count: int
+  indicator_results: list[IndicatorResult]
+  contradictions: list[Contradiction]
+  outcome: Outcome
+  decided_at: datetime
+  decided_by: string
+  notes: string?
+
+# ---------------------------------------------------------
+# 1) Deterministic Evaluation Order (must not change)
+# ---------------------------------------------------------
+function evaluate_p_bgu(site_id, mode, year, pentad_id) -> OutcomeRecord:
+  pw = load_pentad_window(year, pentad_id)                    # MUST exist
+  mwp = load_mwp(site_id, mode)                               # MUST exist
+  sbis = load_sbis(site_id)                                   # MUST exist
+
+  t_eval = pw.t_close + hours(mwp.grace_window_hours)
+
+  # 1. SDR Validity Gate (default-to-fail)
+  sdr = load_sdr(site_id, mode, year, pentad_id)
+  if sdr is null:
+    return fail_record(site_id, mode, year, pentad_id, pw, t_eval,
+                       notes="Missing SDR (pre-window stress declaration required).")
+
+  if sdr.declared_at >= pw.t_open:
+    return fail_record(site_id, mode, year, pentad_id, pw, t_eval,
+                       sdr_hash=sdr.hash,
+                       notes="Invalid SDR: declared_at not strictly before pentad open.")
+
+  if not verify_signature(sdr.signature, sdr.declared_by_id, sdr.hash):
+    return fail_record(site_id, mode, year, pentad_id, pw, t_eval,
+                       sdr_hash=sdr.hash,
+                       notes="Invalid SDR: signature verification failed.")
+
+  # 2. Load Evidence Within Window (+ grace for ingestion only)
+  # Evidence is accepted only if captured within [t_open, t_close].
+  # Upload within grace does not extend capture time eligibility.
+  records = load_witness_records(site_id, mode, year, pentad_id,
+                                captured_at_min=pw.t_open, captured_at_max=pw.t_close,
+                                ingestion_deadline=t_eval)
+
+  # 3. Evidence Authenticity Gate
+  # Any record failing authenticity is discarded; if discarding causes MWP failure, outcome is FAIL.
+  valid_records = []
+  for r in records:
+    if not verify_signature(r.signature, r.author_or_device_id, r.payload_hash):
+      continue
+    if not validate_site_binding(r, sdr.site_polygon):
+      continue
+    valid_records.append(r)
+
+  # 4. Independence Gate
+  # Enforce independence rules deterministically. Remove records that violate independence.
+  valid_records = enforce_independence(valid_records, mwp.independence_rules)
+
+  # 5. Minimum Witness Package Gate
+  mw_count = count_by_class(valid_records, MW)
+  iw_count = count_by_class(valid_records, IW)
+  cw_count = count_by_class(valid_records, CW)
+
+  if mw_count < mwp.mw_min or iw_count < mwp.iw_min or cw_count < mwp.cw_min:
+    return fail_record(site_id, mode, year, pentad_id, pw, t_eval,
+                       sdr_hash=sdr.hash,
+                       mw_count=mw_count, iw_count=iw_count, cw_count=cw_count,
+                       evidence_root_hash=hash_evidence(valid_records),
+                       notes="MWP not met: insufficient independent witnesses.")
+
+  # 6. Construct Claims and Detect Contradictions
+  # Claims are derived deterministically from witness payloads into a normalized claim-set.
+  claims = derive_claims(valid_records) # deterministic parsing & normalization
+  contradictions = detect_contradictions(claims) # pairwise or rule-based contradictions
+
+  # 7. Resolve Contradictions (never widen assumptions)
+  # Resolution is permitted only if:
+  # - an explicit pre-declared resolution rule exists, AND
+  # - required witness classes for that rule are present.
+  resolved_contradictions = []
+  for c in contradictions:
+    res = resolve_contradiction(c, claims, sbis, sdr)
+    resolved_contradictions.append(res)
+
+  if any_unresolved(resolved_contradictions):
+    # Unresolved contradiction induces FAIL unless PAUSE is explicitly allowed and conditions met.
+    if pause_allowed(site_id, mode) and force_majeure_declared(site_id, year, pentad_id):
+      return pause_record(site_id, mode, year, pentad_id, pw, t_eval,
+                          sdr_hash=sdr.hash,
+                          mw_count=mw_count, iw_count=iw_count, cw_count=cw_count,
+                          evidence_root_hash=hash_evidence(valid_records),
+                          contradictions=resolved_contradictions,
+                          notes="PAUSE: evaluation impossible under pre-declared force majeure.")
+    else:
+      return fail_record(site_id, mode, year, pentad_id, pw, t_eval,
+                         sdr_hash=sdr.hash,
+                         mw_count=mw_count, iw_count=iw_count, cw_count=cw_count,
+                         evidence_root_hash=hash_evidence(valid_records),
+                         contradictions=resolved_contradictions,
+                         notes="FAIL: unresolved contradictions; ambiguity tightens constraint.")
+
+  # 8. Indicator Evaluation (hard-fail precedence)
+  indicator_results = []
+  for ind in sbis.indicators:
+    if ind.mode != mode:
+      continue
+
+    # Ensure required witness classes exist for this indicator.
+    if not witness_classes_present(valid_records, ind.required_witness_classes):
+      # Apply ambiguity rule deterministically.
+      indicator_results.append(apply_indicator_ambiguity(ind, valid_records))
+      continue
+
+    status, supporting = eval_indicator_hard_fail(ind, claims)
+    if status == "hard_fail":
+      indicator_results.append(IndicatorResult(ind.indicator_id, "hard_fail", supporting))
+      return fail_record(site_id, mode, year, pentad_id, pw, t_eval,
+                         sdr_hash=sdr.hash,
+                         mw_count=mw_count, iw_count=iw_count, cw_count=cw_count,
+                         evidence_root_hash=hash_evidence(valid_records),
+                         indicator_results=indicator_results,
+                         contradictions=resolved_contradictions,
+                         notes="FAIL: hard-fail indicator triggered.")
+
+    if status == "ambiguous":
+      ir = handle_indicator_ambiguity(ind, valid_records, claims)
+      indicator_results.append(ir)
+      if ir.status == "hard_fail":
+        return fail_record(site_id, mode, year, pentad_id, pw, t_eval,
+                           sdr_hash=sdr.hash,
+                           mw_count=mw_count, iw_count=iw_count, cw_count=cw_count,
+                           evidence_root_hash=hash_evidence(valid_records),
+                           indicator_results=indicator_results,
+                           contradictions=resolved_contradictions,
+                           notes="FAIL: ambiguity rule resolved against continuity.")
+
+    if status == "ok":
+      indicator_results.append(IndicatorResult(ind.indicator_id, "ok", supporting))
+
+  # 9. Final Outcome (PASS only if no fails and no unresolved ambiguity disallowed)
+  # If any indicator remains "ambiguous" and its ambiguity rule is not explicitly ALLOW_PASS..., then FAIL.
+  if any_disallowed_ambiguity(indicator_results, sbis, mode):
+    return fail_record(site_id, mode, year, pentad_id, pw, t_eval,
+                       sdr_hash=sdr.hash,
+                       mw_count=mw_count, iw_count=iw_count, cw_count=cw_count,
+                       evidence_root_hash=hash_evidence(valid_records),
+                       indicator_results=indicator_results,
+                       contradictions=resolved_contradictions,
+                       notes="FAIL: residual ambiguity cannot resolve in favor of continuity.")
+
+  return pass_record(site_id, mode, year, pentad_id, pw, t_eval,
+                     sdr_hash=sdr.hash,
+                     mw_count=mw_count, iw_count=iw_count, cw_count=cw_count,
+                     evidence_root_hash=hash_evidence(valid_records),
+                     indicator_results=indicator_results,
+                     contradictions=resolved_contradictions,
+                     notes="PASS: SDR valid, MWP met, no hard fails, contradictions resolved, ambiguity rules satisfied.")
+
+
+# ---------------------------------------------------------
+# 2) Helper Rules (Deterministic, Canonical)
+# ---------------------------------------------------------
+
+function validate_site_binding(record, site_polygon) -> bool:
+  if record.site_binding == "in_polygon" and record.location is not null:
+    return point_in_polygon(record.location, site_polygon)
+  if record.site_binding in ["device_bound", "route_bound"]:
+    return true  # verified via device registry/route registry external to this function
+  return false
+
+function enforce_independence(records, independence_rules) -> list[WitnessRecord]:
+  # Deterministic selection: sort by captured_at asc, then wr_id asc
+  sorted = sort(records, key=(captured_at, wr_id))
+  kept = []
+  for r in sorted:
+    if passes_independence(r, kept, independence_rules):
+      kept.append(r)
+  return kept
+
+function derive_claims(records) -> set[Claim]:
+  # Converts payloads into normalized claims such as:
+  # "human_detected_at_camera_A", "snare_found", "carcass_confirmed", "perennial_cover_drop", etc.
+  # MUST be deterministic: fixed parsers, fixed vocab, fixed confidence tier mapping (ordinal, not numeric)
+  return deterministic_claim_extraction(records)
+
+function detect_contradictions(claims) -> list[Contradiction]:
+  # Contradiction patterns are pre-declared; examples:
+  # - "no_humans_detected" vs "human_detected"
+  # - "no_snares_found" vs "snare_found"
+  # - "cover_increase" vs "cover_drop_below_threshold"
+  return apply_contradiction_ruleset(claims)
+
+function resolve_contradiction(c, claims, sbis, sdr) -> Contradiction:
+  # Resolution is only allowed via pre-declared resolution rules:
+  # e.g., "If human detected, require permit record claim present from MW+IW corroboration."
+  if exists_predeclared_resolution_rule(c.type):
+    if resolution_requirements_met(c.type, claims):
+      return Contradiction(c.a_wr_id, c.b_wr_id, c.type, "resolved")
+  return Contradiction(c.a_wr_id, c.b_wr_id, c.type, "unresolved")
+
+function apply_indicator_ambiguity(ind, records) -> IndicatorResult:
+  if ind.ambiguity_rule == FAIL:
+    return IndicatorResult(ind.indicator_id, "hard_fail", supporting_wr_ids=[])
+  if ind.ambiguity_rule == PAUSE_IF_DECLARED:
+    return IndicatorResult(ind.indicator_id, "ambiguous", supporting_wr_ids=[])
+  if ind.ambiguity_rule == ALLOW_PASS_IF_CORROB_GT_N:
+    # If required witness classes missing, cannot satisfy corroboration; treat as FAIL unless explicitly permitted.
+    return IndicatorResult(ind.indicator_id, "hard_fail", supporting_wr_ids=[])
+  return IndicatorResult(ind.indicator_id, "hard_fail", supporting_wr_ids=[])
+
+function handle_indicator_ambiguity(ind, records, claims) -> IndicatorResult:
+  if ind.ambiguity_rule == FAIL:
+    return IndicatorResult(ind.indicator_id, "hard_fail", supporting_wr_ids=[])
+  if ind.ambiguity_rule == PAUSE_IF_DECLARED:
+    return IndicatorResult(ind.indicator_id, "ambiguous", supporting_wr_ids=[])
+  if ind.ambiguity_rule == ALLOW_PASS_IF_CORROB_GT_N:
+    n = ind.allow_pass_corrob_threshold
+    corrob = corroboration_count(ind, records, claims) # deterministic
+    if corrob > n:
+      return IndicatorResult(ind.indicator_id, "ok", supporting_wr_ids=corrob_supporting_wr_ids(ind))
+    else:
+      return IndicatorResult(ind.indicator_id, "hard_fail", supporting_wr_ids=corrob_supporting_wr_ids(ind))
+  return IndicatorResult(ind.indicator_id, "hard_fail", supporting_wr_ids=[])
+
+function any_disallowed_ambiguity(indicator_results, sbis, mode) -> bool:
+  for ir in indicator_results:
+    if ir.status != "ambiguous":
+      continue
+    ind = lookup_indicator(sbis, ir.indicator_id)
+    if ind.mode != mode:
+      continue
+    # Ambiguity is disallowed unless explicitly ALLOW_PASS... and corroboration was satisfied,
+    # in which case status would not remain "ambiguous".
+    return true
+  return false
+
+# ---------------------------------------------------------
+# 3) Record Constructors (strict)
+# ---------------------------------------------------------
+function fail_record(...) -> OutcomeRecord:
+  return OutcomeRecord(... outcome=FAIL ...)
+
+function pass_record(...) -> OutcomeRecord:
+  return OutcomeRecord(... outcome=PASS ...)
+
+function pause_record(...) -> OutcomeRecord:
+  return OutcomeRecord(... outcome=PAUSE ...)
+
+function hash_evidence(records) -> bytes32:
+  # Deterministic evidence root hash: order by (witness_class, captured_at, wr_id)
+  ordered = sort(records, key=(witness_class, captured_at, wr_id))
+  return merkle_root([r.payload_hash for r in ordered])
