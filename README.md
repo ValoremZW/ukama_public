@@ -22,39 +22,48 @@ Table of Contents
 • Ecology constrains economics.
 • Doctrine constrains finance.
 • Failure modes are defined in advance.
+
 2. Dual-Token Architecture
 • BDR functions as a non-financial ecological reserve asset.
 • BIO functions as the system’s utility and participation layer.
 • No peg, reserve ratio, or quantitative linkage shall exist between BDR and BIO.
+
 3. Bio Dynamic Regeneration (BDR) Doctrine
 • BDR records ecological memory witnessed through time.
 • BDR is not priced, traded, collateralised, or financialised.
 • BDR functions analogously to gold on a central bank balance sheet.
 • BDR issuance tightens as ecological maturity increases.
+
 4. BioDollar (BIO) Participation Layer
 • BIO represents time-bound participation under ecological constraint.
 • Qualification occurs only at defined thresholds.
 • Accumulation beyond qualification confers no additional entitlement.
+
 5. Proof of Protection (PoP) & Proof of Regeneration (PoR)
 • PoP recognises restraint, not activity.
 • PoR recognises only net ecological state improvement persisting across defined stress
 intervals.
 • Effort, expenditure, intent, and compliance have no independent standing.
+
 6. Ecological Difficulty Adjustment (EDA)
 • EDA increases proof thresholds and verification intensity as ecosystems mature.
 • Scarcity emerges from ecological success, not administrative cap.
+
 7. Alignment Bonds & Participation Doctrine
 • Alignment Bonds are negative-yield obligation commitments.
 • They confer no yield, authority, governance rights, or entitlement.
 • Redemption is permitted but deliberately unattractive and resets eligibility.
+
 8. Sacred Access Doctrine
 • Sacred knowledge enters only by explicit custodian permission.
 • Financial contribution confers no entitlement.
 • Presence does not mature into authority.
+
 9. Treasury Architecture
 • BDR held per project as ecological reserve.
 • Operational cashflows strictly separated from ecological reserve.
 • BIO absorbs economic stress; BDR remains indifferent.
+
 10. Canonical Axioms
 • Community is the Operating System.
 • We do not price nature, because nature is priceless.
