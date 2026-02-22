@@ -4,7 +4,7 @@ Date of Issue: 21 February 2026
 Jurisdiction Reference: Zimbabwe (Foundational Jurisdiction), with international application subject
 to local legal compliance.
 Author: Stuart Robert Beverley
-Identity: Mbeva Chidyamaskati
+Identity: valoremzw
 Copyright © Stuart Robert Beverley. All rights reserved.
 Table of Contents
 • 1. Core Operating Principles
