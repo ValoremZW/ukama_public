@@ -1,0 +1,81 @@
+# Constants (fixed by protocol version)
+FIB = [1, 2, 3, 5, 8, 13, 21, 34]          # extend as needed
+ALPHA = 1.0                                 # or 2.0 for stricter contraction
+I1 = base_issuance_per_qualifying_endpoint  # protocol constant or site baseline
+K_STAR = 5                                   # example threshold; fixed in advance
+
+# State (per site)
+k = current_maturity_stage
+pop_streak = 0                # consecutive seasons with PoP intact
+por_windows_in_a_row = 0       # consecutive satisfied windows (each of length W_k)
+
+function seasonal_endpoint_check(endpoint_date):
+
+    # 1) Stage assignment is ecological only
+    k_new = assess_maturity_stage_from_biophysics()
+    if k_new != k:
+        k = k_new
+        # Stage changes never grant issuance.
+        # Reset deep-maturity sequence counters to prevent opportunistic staging.
+        pop_streak = 0
+        por_windows_in_a_row = 0
+
+    Wk = FIB[k]  # required seasons per window
+
+    # 2) Evaluate Proof of Protection for the just-ended season interval
+    pop_status = evaluate_PoP_for_interval()  # PASS / FAIL / AMBIGUOUS
+
+    if pop_status != PASS:
+        pop_streak = 0
+        por_windows_in_a_row = 0
+        record("Continuity collapsed", endpoint_date, pop_status)
+        return NO_ISSUANCE
+
+    pop_streak += 1
+    record("PoP intact", endpoint_date, pop_streak)
+
+    # 3) Only evaluate PoR when a full Wk-season PoP window exists
+    if pop_streak < Wk:
+        return NO_ISSUANCE
+
+    # 4) Evaluate PoR over the last Wk seasons (the completed window)
+    por_status = evaluate_PoR_over_last_Wk_seasons(Wk)  # PASS / FAIL / AMBIGUOUS
+
+    if por_status != PASS:
+        # Window not satisfied for PoR, restart the deep-maturity sequence.
+        por_windows_in_a_row = 0
+        record("PoR not satisfied for window", endpoint_date, por_status)
+
+        # Anti-gaming reset: require a fresh Wk window before the next PoR attempt.
+        pop_streak = 0
+        return NO_ISSUANCE
+
+    # This window is satisfied
+    por_windows_in_a_row += 1
+    record("Satisfied window", endpoint_date, por_windows_in_a_row)
+
+    # 5) Determine how many consecutive satisfied windows are required
+    required_windows = 2 if k >= K_STAR else 1
+
+    if por_windows_in_a_row < required_windows:
+        # Prepare for the next consecutive window by resetting the PoP streak.
+        # Next window must be another full Wk seasons.
+        pop_streak = 0
+        return NO_ISSUANCE
+
+    # 6) Compute issuance cap I_k (tail emissions preserved by design)
+    Wprev = FIB[max(k - 1, 0)]
+    issuance_cap = I1 * (Wprev / Wk) ^ ALPHA
+
+    # 7) Issue at most issuance_cap at this endpoint
+    issue_amount = min(requested_issue_amount(), issuance_cap)
+    issue_tokens(issue_amount)
+
+    record("Transition recognised and issuance executed",
+           endpoint_date, k, Wk, required_windows, issuance_cap, issue_amount)
+
+    # 8) Reset counters after issuance to prevent rapid repeated claims
+    pop_streak = 0
+    por_windows_in_a_row = 0
+
+    return issue_amount
