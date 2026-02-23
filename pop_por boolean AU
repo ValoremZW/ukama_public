@@ -1,0 +1,120 @@
+# u-Kama PoP / PoR Evaluation at Seasonal Endpoints
+# Boolean protocol: no averaging, no compensation, uncertainty never resolves in favour of continuity.
+
+# -----------------------------
+# CONFIG (canonical defaults)
+# -----------------------------
+K := 2                          # consecutive PoP windows required before PoR may qualify
+WINDOWS_PER_YEAR := 2           # end of winter, end of summer (example)
+
+# -----------------------------
+# STATE (persisted per site)
+# -----------------------------
+pop_run := 0                    # consecutive PoP_OK count up to current endpoint
+state := "S0_FAIL"              # {"S0_FAIL","S1_PROTECTED","S2_REGENERATING"}
+
+# Optional: hold last known status for reporting
+last_pop_ok := false
+last_por_ok := false
+
+# -----------------------------
+# INPUTS per endpoint t
+# (must be computed from witnessing + measurements before evaluation)
+# -----------------------------
+# DataOK(t): minimum witnessing + data completeness met
+# P(t): measured grazing pressure for the window (e.g., AU_days_per_ha)
+# Pmax(t): permitted maximum pressure for the window (site + season + condition class)
+# R(t): recovery condition satisfied
+# I(t): irreversible indicator triggered
+# dS(t): net ecological state improvement at endpoint (Boolean)
+# Persist(t): improvement survives next stress interval (Boolean)
+#
+# Note: Persist(t) may be unknown at time t. Under uncertainty doctrine, unknown => false
+# unless explicitly permitted by prior rule.
+
+function EvaluateSeasonalEndpoint(t, DataOK, P, Pmax, R, I, dS, PersistKnown, PersistValue):
+
+    # -----------------------------
+    # 1) Resolve booleans deterministically
+    # -----------------------------
+    PressureOK := (P <= Pmax)
+
+    # Uncertainty handling for persistence:
+    if PersistKnown == false:
+        Persist := false          # absence defaults to failure
+    else:
+        Persist := PersistValue
+
+    # -----------------------------
+    # 2) PoP evaluation (negative constraint)
+    # -----------------------------
+    PoP_OK := DataOK and PressureOK and R and (not I)
+
+    if PoP_OK == true:
+        pop_run := min(pop_run + 1, K)   # saturating counter
+    else:
+        pop_run := 0
+
+    # -----------------------------
+    # 3) PoR eligibility gate + evaluation
+    # -----------------------------
+    PoP_RunK := (pop_run >= K)
+
+    PoR_OK := PoP_RunK and dS and Persist
+
+    # -----------------------------
+    # 4) State machine transition
+    # -----------------------------
+    if PoP_OK == false:
+        state := "S0_FAIL"               # continuity collapsed or unproven for this window
+    else:
+        if PoR_OK == true:
+            state := "S2_REGENERATING"
+        else:
+            state := "S1_PROTECTED"
+
+    # -----------------------------
+    # 5) Emit outputs for logging / issuance / reporting
+    # -----------------------------
+    last_pop_ok := PoP_OK
+    last_por_ok := PoR_OK
+
+    return {
+        "t": t,
+        "PressureOK": PressureOK,
+        "PoP_OK": PoP_OK,
+        "pop_run": pop_run,
+        "PoP_RunK": PoP_RunK,
+        "PoR_OK": PoR_OK,
+        "state": state
+    }
+
+
+# -----------------------------
+# Example driver loop (per site)
+# -----------------------------
+for each seasonal endpoint t in chronological order:
+
+    # Step A: compute inputs from data pipeline (witnessing + ecology)
+    DataOK := ComputeDataCompleteness(t)
+    P := ComputePressure_AUdaysPerHa(t)             # AU scaling or metabolic W^0.75 proxy allowed
+    Pmax := ComputePermittedPressureCap(t)          # derived from site condition + season + stress class
+    R := ComputeRecoverySatisfied(t)
+    I := ComputeIrreversibleIndicatorTriggered(t)
+    dS := ComputeNetStateImprovement(t)
+
+    # Persistence may be evaluated with a lag; pass known/unknown explicitly
+    PersistKnown, PersistValue := ComputePersistenceStatus(t)   # (false, _) if not yet testable
+
+    # Step B: evaluate protocol
+    result := EvaluateSeasonalEndpoint(t, DataOK, P, Pmax, R, I, dS, PersistKnown, PersistValue)
+
+    # Step C: enforce actions
+    if result.PoP_OK == false:
+        TriggerPauseAndConstraintIncrease(t)         # optional: tighten future Pmax, increase witnessing burden
+        BlockAnyRegenerationQualification(t)
+
+    if result.PoR_OK == true:
+        RecordRegenerationStateTransition(t)         # qualifies state transition only; no reward for effort
+
+    LogResult(result)
