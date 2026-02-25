@@ -1,52 +1,245 @@
-u-Kama Public Glossary (Lossy Version)
+# u-Kama Doctrine — Canonical Glossary
 
-u-Kama
-A system that ties economic participation to ecological reality, so money serves continuity rather than extraction.
+**Status:** CANONICAL  
+**Version:** v1.0  
+**Canonical Freeze Date:** 2026-02-25  
+**Jurisdiction:** Zimbabwe (conceptual doctrine; non-statutory)  
+**Author:** Stuart Beverley  
+**System:** u-Kama (Bio Dynamic Regeneration / BioDollar)
 
-BIO (BioDollar)
-The participation and coordination token used inside u-Kama. It enables access, contribution, and accountability. It is not marketed as a “green investment.”
+---
 
-BDR (Bio Dynamic Regeneration Record)
-A long-term ecological record. It exists to constrain the system by remembering what endured in the land over time. It does not circulate like money.
+## Canonical Freeze Notice
 
-Ecological Continuity
-Nature holding its ground through time. If a defined state persists through a defined season of pressure, it counts. If it breaks, it does not.
+This glossary constitutes a **canonical doctrinal artifact** of the u-Kama system.
 
-Proof of Protection (PoP)
-A record that a place stayed within agreed bounds through a defined period. It rewards restraint, not claims or activity.
+As of the freeze date above:
+- All definitions herein are **authoritative**.
+- Terminology may not be reinterpreted, softened, extended, or repurposed by implication.
+- Any protocol logic, governance rule, smart contract, policy document, or public communication that uses these terms **inherits their meaning exclusively from this glossary**.
 
-Proof of Regeneration (PoR)
-A record that a place measurably improved and the improvement held through time.
+Amendments are permitted **only** via:
+1. Explicit version increment (v1.1, v2.0, etc.).
+2. Dated change log.
+3. Supersession notice stating which clauses are replaced.
+4. Preservation of all prior versions without deletion.
 
-Seasons as Tests
-u-Kama evaluates outcomes at seasonal endpoints, not on demand. Nature is judged on survival through cycles, not on paperwork.
+Silence does not imply permission.  
+Ambiguity increases constraint.
 
-Witnessing
-Truth is recognised through independent observation and accountability over time. Effort and good intentions do not qualify on their own.
+---
 
-Cell
-A defined area small enough that failure cannot be hidden and responsibility is clear.
+## Scope
 
-Right of Use (ROU)
-Recognised authority to steward land without owning it. It clarifies who may act and who must answer for outcomes.
+This glossary governs:
+- All u-Kama protocol logic.
+- All BDR and BIO related documentation.
+- All governance, participation, and verification language.
+- All public-facing summaries where terms are reused.
 
-Constraint First
-Ecological truth does not “back” the token. Instead, ecological truth limits what the token may do.
+Where conflict arises, **this glossary prevails**.
 
-Ecological Difficulty Adjustment
-As ecosystems recover, proving continued improvement gets harder, slower, and stricter. Success tightens the system. It never loosens it.
+---
 
-No Offsetting Inside u-Kama
-Failure in one place cannot be cancelled by success elsewhere. Each place must stand on its own.
+## Core System
 
-Community as the Operating System
-Local custodianship, legitimacy, and lived responsibility are the foundation. Technology supports this. It does not replace it.
+### u-Kama
+The ecological–monetary system that places ecological continuity as the primary constraint on economic activity. u-Kama treats land and living systems as realities, not assets, and designs money as a coordination tool under ecological limits.
 
-What u-Kama is not
-Not a carbon offset scheme.
-Not a nature-backed stablecoin.
-Not a market for “selling nature.”
-Not a way to buy control through funding.
+### Community is the Operating System
+Canonical axiom. Ecological continuity is sustained through human communities bound to place, responsibility, and consequence through time.
 
-Core promise
-u-Kama converts external demand for ecological continuity into protection capacity and custodial livelihoods, without turning nature into a financial product.
+---
+
+## Ecological Truth & Memory
+
+### Bio Dynamic Regeneration (BDR)
+A non-financial ecological reserve record representing witnessed ecological continuity and regeneration through time. BDR is not priced, traded, redeemed, or consumed. It functions as recorded ecological memory, analogous to gold as a reserve asset but grounded in living systems.
+
+### BDR Era
+A completed interval of accumulated, uninterrupted ecological continuity under defined stress conditions. Eras are recorded, not minted as coins.
+
+### Ecological Memory
+The durable record that an ecological state persisted through time and stress. Memory accumulates only through survival, never through intent, effort, or expenditure.
+
+### Witnessing
+The act that converts ecological existence into ecological continuity through independent corroboration across time.
+
+---
+
+## Tokens & Economic Layer
+
+### BioDollar (BIO)
+The utility and participation token of u-Kama. BIO enables access, coordination, validation, and obligation under constraint. BIO does not represent, redeem, or claim ecological truth.
+
+### BDR–BIO Separation Doctrine
+Canonical rule. BDR and BIO are strictly separated. No peg, reserve ratio, redemption, pricing reference, or collateral linkage may exist between them.
+
+### WBIO
+A wrapped representation of BIO used only at the external membrane for settlement. It carries no authority inside u-Kama.
+
+### BIO Expiry
+BIO does not recycle. It either expires or is re-issued from scratch under protocol constraint.
+
+---
+
+## Proof Framework
+
+### Proof of Protection (PoP)
+A Boolean determination that a defined ecological state did not cross a declared failure threshold during a defined stress window. Protection recognises restraint, not activity.
+
+### Proof of Regeneration (PoR)
+A Boolean determination that a defined ecological state crossed a declared improvement threshold and persisted across stress.
+
+### Failure Threshold
+A pre-declared ecological boundary beyond which continuity collapses for the interval.
+
+### Improvement Threshold
+A pre-declared ecological boundary that must be crossed and sustained for regeneration to be recognised.
+
+---
+
+## Time, Units & State
+
+### Base Granular Unit (BGU)
+A witnessed interval of ecological time that remained intact under defined stress and restraint conditions. BGUs accumulate only through uninterrupted continuity and have no independent value or transferability.
+
+### Ecological Verification Unit (EVU)
+A protocol-level verification record that attests to successful witnessing of BGUs. EVUs qualify state transitions but have no independent meaning or value.
+
+### State Machine
+The protocol structure through which ecological truth is recognised only as discrete transitions. Nuance exists above the state machine, never inside it.
+
+### Boolean Ecology
+The principle that ecological truth at the protocol layer resolves only as pass or fail, because ecosystems cross thresholds, not averages.
+
+---
+
+## Constraint & Issuance
+
+### Ecological Difficulty Adjustment (EDA)
+A dynamic issuance governor that increases proof thresholds, verification burden, and risk requirements as ecological integrity increases. Issuance tightens toward zero with success.
+
+### Issuance Window
+A defined seasonal or temporal endpoint at which state transitions may be evaluated.
+
+### Activation Gate
+The minimum condition required for a project or cell to become eligible for issuance evaluation.
+
+### Issuance Phase
+The stage at which BIO may be issued, conditional on satisfied ecological state transitions.
+
+---
+
+## Land, Cells & Authority
+
+### Ecological Cell
+The minimum spatial unit at which ecological failure becomes falsifiable under a single authority, stress regime, and threshold set.
+
+### Cell Size
+Area-gauged, not shape-defined. Minimum and maximum sizes are set to preserve falsifiability and accountability.
+
+### Cell NFT (Right of Use NFT)
+A non-financial NFT encoding recognised stewardship authority and protocol obligation over an ecological cell. It conveys no ownership, yield, pricing claim, or BDR entitlement.
+
+### Right of Use (ROU)
+Recognised authority to steward an ecological or cultural asset without owning it, establishing who may act and who is accountable.
+
+### Transfer Under Constraint
+ROU reassignment permitted only under defined custodial and protocol triggers. Transfer does not reset ecological history or difficulty.
+
+---
+
+## Roles & Participation
+
+### Custodian
+Recognised local or traditional authority responsible for legitimacy, bounds, and permission.
+
+### Steward
+Operational actor responsible for day-to-day management, protection, and reporting.
+
+### Witness
+A named human participant bound to observation and accountability through time.
+
+### Virtual Observer
+A remote participant who witnesses without authority, ownership, or intervention rights.
+
+### Subscriber
+A participant who supports continuity through structured obligation rather than donation.
+
+---
+
+## Verification & Integrity
+
+### Trias Testium
+The principle that truth is recognised only when preserved by three independent, non-sovereign witness classes: observational, laboratory, and human.
+
+### Observational Witness
+Aerial, orbital, or fixed sensors and cameras.
+
+### Laboratory Witness
+Soil, eDNA, and biophysical assays.
+
+### Human Witness
+Named rangers, transects, and observers.
+
+### AI (Coherence Layer)
+Performs contradiction and consistency checks. AI is not a witness and holds no authority.
+
+---
+
+## Use, Extraction & Ethics
+
+### Subsistence Use
+Legitimate extraction exercised within declared ecological and cultural bounds under recognised authority.
+
+### Market Leakage
+Extraction that escapes subsistence bounds or converts survival use into market depletion. Market leakage collapses Protection.
+
+### Pressure Class
+A declared tier that increases verification intensity and obligation without softening thresholds.
+
+---
+
+## Financial Doctrine
+
+### Alignment Bond
+A negative-yield participation mechanism that binds capital to obligation without entitlement, yield, or authority.
+
+### Obligation Pool
+A financial pool that allocates burden for protection and continuity. It does not back or reference BDR.
+
+### Membrane
+The boundary where u-Kama interfaces with external financial systems without allowing reverse influence.
+
+---
+
+## Canonical Distinctions
+
+### Land is a Reality
+Land exists independently of title, token, or law.
+
+### Permissions are Not Realities
+Title, NFTs, and ROUs are permissions that may change without altering ecological truth.
+
+### Seasons Are Tests
+Time is not an invoice. Continuity must survive stress to be recorded.
+
+---
+
+## Glossary Axiom (Fixed)
+
+**Words become language, language becomes code, code becomes law.**
+
+---
+
+## Change Log
+
+- **v1.0 (2026-02-25):** Initial canonical glossary freeze.
+
+---
+
+## Supersession
+
+This document supersedes all prior informal glossaries, drafts, notes, and explanations.  
+Future versions must explicitly state which sections are amended.
