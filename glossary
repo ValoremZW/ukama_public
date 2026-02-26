@@ -1,245 +1,188 @@
-# u-Kama Doctrine — Canonical Glossary
+# u-Kama Glossary (Canonical)
 
-**Status:** CANONICAL  
-**Version:** v1.0  
-**Canonical Freeze Date:** 2026-02-25  
-**Jurisdiction:** Zimbabwe (conceptual doctrine; non-statutory)  
-**Author:** Stuart Beverley  
-**System:** u-Kama (Bio Dynamic Regeneration / BioDollar)
+> **Glossary Axiom**  
+> Words become language.  
+> Language becomes code.  
+> Code becomes law.
 
----
-
-## Canonical Freeze Notice
-
-This glossary constitutes a **canonical doctrinal artifact** of the u-Kama system.
-
-As of the freeze date above:
-- All definitions herein are **authoritative**.
-- Terminology may not be reinterpreted, softened, extended, or repurposed by implication.
-- Any protocol logic, governance rule, smart contract, policy document, or public communication that uses these terms **inherits their meaning exclusively from this glossary**.
-
-Amendments are permitted **only** via:
-1. Explicit version increment (v1.1, v2.0, etc.).
-2. Dated change log.
-3. Supersession notice stating which clauses are replaced.
-4. Preservation of all prior versions without deletion.
-
-Silence does not imply permission.  
-Ambiguity increases constraint.
+This glossary defines canonical terms used within the u-Kama corpus.  
+Definitions are normative and binding.  
+Where ambiguity arises, doctrine prevails over optimisation.
 
 ---
 
-## Scope
+## Community as the Operating System (CATOS)
 
-This glossary governs:
-- All u-Kama protocol logic.
-- All BDR and BIO related documentation.
-- All governance, participation, and verification language.
-- All public-facing summaries where terms are reused.
+**Definition**  
+CATOS recognises community as the primary operating system through which ecological continuity is maintained. Authority, legitimacy, memory, and response capacity emerge from lived presence, customary roles, and endurance through time, not from external control, optimisation, or capital allocation.
 
-Where conflict arises, **this glossary prevails**.
+**Doctrine**  
+Community is not a stakeholder layer.  
+It is the execution layer.  
+Technology, finance, and governance function only as support processes to CATOS, never as substitutes.
 
----
-
-## Core System
-
-### u-Kama
-The ecological–monetary system that places ecological continuity as the primary constraint on economic activity. u-Kama treats land and living systems as realities, not assets, and designs money as a coordination tool under ecological limits.
-
-### Community is the Operating System
-Canonical axiom. Ecological continuity is sustained through human communities bound to place, responsibility, and consequence through time.
+**Cross-References**  
+- Human witness authority: `BGU`  
+- Legitimacy and restraint logic: `PoP`, `PoR`  
+- Long-term continuity memory: `BDR`
 
 ---
 
-## Ecological Truth & Memory
+## Ecological Boolean Gate
 
-### Bio Dynamic Regeneration (BDR)
-A non-financial ecological reserve record representing witnessed ecological continuity and regeneration through time. BDR is not priced, traded, redeemed, or consumed. It functions as recorded ecological memory, analogous to gold as a reserve asset but grounded in living systems.
+**Definition**  
+The Ecological Boolean Gate is the binary state system governing ecological truth within u-Kama. At each declared stress window, an ecological unit is evaluated as either:
 
-### BDR Era
-A completed interval of accumulated, uninterrupted ecological continuity under defined stress conditions. Eras are recorded, not minted as coins.
+- **Protected** or **Not Protected**  
+- **Regenerating** or **Not Regenerating**
 
-### Ecological Memory
-The durable record that an ecological state persisted through time and stress. Memory accumulates only through survival, never through intent, effort, or expenditure.
+No intermediate, averaged, probabilistic, or compensatory states are permitted.
 
-### Witnessing
-The act that converts ecological existence into ecological continuity through independent corroboration across time.
+**Doctrine**  
+Protection functions as a gate on continuity.  
+Regeneration is recognised only within continuity.  
+Failure collapses forward progression but never rewrites past recorded truth.
 
----
-
-## Tokens & Economic Layer
-
-### BioDollar (BIO)
-The utility and participation token of u-Kama. BIO enables access, coordination, validation, and obligation under constraint. BIO does not represent, redeem, or claim ecological truth.
-
-### BDR–BIO Separation Doctrine
-Canonical rule. BDR and BIO are strictly separated. No peg, reserve ratio, redemption, pricing reference, or collateral linkage may exist between them.
-
-### WBIO
-A wrapped representation of BIO used only at the external membrane for settlement. It carries no authority inside u-Kama.
-
-### BIO Expiry
-BIO does not recycle. It either expires or is re-issued from scratch under protocol constraint.
+**Cross-References**  
+- Governs: `PoP`, `PoR`  
+- Gates accumulation: `BGU`  
+- Constrains advancement: `BDR`
 
 ---
 
-## Proof Framework
+## Protection
 
-### Proof of Protection (PoP)
-A Boolean determination that a defined ecological state did not cross a declared failure threshold during a defined stress window. Protection recognises restraint, not activity.
+**Definition**  
+Protection is the persistence of a defined ecological state across a declared stress window without crossing a defined failure threshold.
 
-### Proof of Regeneration (PoR)
-A Boolean determination that a defined ecological state crossed a declared improvement threshold and persisted across stress.
+**Doctrine**  
+Protection recognises restraint, not activity.  
+Effort, expenditure, intent, and enforcement have no independent standing.
 
-### Failure Threshold
-A pre-declared ecological boundary beyond which continuity collapses for the interval.
+**Binding**  
+Protection is evaluated through the Ecological Boolean Gate and functions as a prerequisite for BGU accumulation.
 
-### Improvement Threshold
-A pre-declared ecological boundary that must be crossed and sustained for regeneration to be recognised.
-
----
-
-## Time, Units & State
-
-### Base Granular Unit (BGU)
-A witnessed interval of ecological time that remained intact under defined stress and restraint conditions. BGUs accumulate only through uninterrupted continuity and have no independent value or transferability.
-
-### Ecological Verification Unit (EVU)
-A protocol-level verification record that attests to successful witnessing of BGUs. EVUs qualify state transitions but have no independent meaning or value.
-
-### State Machine
-The protocol structure through which ecological truth is recognised only as discrete transitions. Nuance exists above the state machine, never inside it.
-
-### Boolean Ecology
-The principle that ecological truth at the protocol layer resolves only as pass or fail, because ecosystems cross thresholds, not averages.
+**Cross-References**  
+- Evaluated by: `PoP`  
+- Gates: `BGU`, `BDR`
 
 ---
 
-## Constraint & Issuance
+## Regeneration
 
-### Ecological Difficulty Adjustment (EDA)
-A dynamic issuance governor that increases proof thresholds, verification burden, and risk requirements as ecological integrity increases. Issuance tightens toward zero with success.
+**Definition**  
+Regeneration is a positive ecological state transition that persists across a declared stress window.
 
-### Issuance Window
-A defined seasonal or temporal endpoint at which state transitions may be evaluated.
+**Doctrine**  
+Net zero does not constitute failure, but it represents the worst acceptable outcome before failure.  
+Improvement claims that do not persist under stress are not recognised.
 
-### Activation Gate
-The minimum condition required for a project or cell to become eligible for issuance evaluation.
+**Binding**  
+Regeneration is recognised only where Protection holds.
 
-### Issuance Phase
-The stage at which BIO may be issued, conditional on satisfied ecological state transitions.
-
----
-
-## Land, Cells & Authority
-
-### Ecological Cell
-The minimum spatial unit at which ecological failure becomes falsifiable under a single authority, stress regime, and threshold set.
-
-### Cell Size
-Area-gauged, not shape-defined. Minimum and maximum sizes are set to preserve falsifiability and accountability.
-
-### Cell NFT (Right of Use NFT)
-A non-financial NFT encoding recognised stewardship authority and protocol obligation over an ecological cell. It conveys no ownership, yield, pricing claim, or BDR entitlement.
-
-### Right of Use (ROU)
-Recognised authority to steward an ecological or cultural asset without owning it, establishing who may act and who is accountable.
-
-### Transfer Under Constraint
-ROU reassignment permitted only under defined custodial and protocol triggers. Transfer does not reset ecological history or difficulty.
+**Cross-References**  
+- Recognised by: `PoR`  
+- Constrains: `BDR` advancement
 
 ---
 
-## Roles & Participation
+## Failure
 
-### Custodian
-Recognised local or traditional authority responsible for legitimacy, bounds, and permission.
+**Definition**  
+Failure is a verified transition across a declared ecological failure threshold within a stress window.
 
-### Steward
-Operational actor responsible for day-to-day management, protection, and reporting.
+**Doctrine**  
+Failure collapses continuity.  
+Failure does not erase prior recorded ecological truth.
 
-### Witness
-A named human participant bound to observation and accountability through time.
-
-### Virtual Observer
-A remote participant who witnesses without authority, ownership, or intervention rights.
-
-### Subscriber
-A participant who supports continuity through structured obligation rather than donation.
+**Cross-References**  
+- Collapses: `PoP`, `BGU` continuity  
+- Blocks forward movement in: `BDR`
 
 ---
 
-## Verification & Integrity
+## Base Granular Unit (BGU)
 
-### Trias Testium
-The principle that truth is recognised only when preserved by three independent, non-sovereign witness classes: observational, laboratory, and human.
+**Definition**  
+A Base Granular Unit (BGU) is a witnessed interval of ecological time that remained intact under defined stress and restraint conditions.
 
-### Observational Witness
-Aerial, orbital, or fixed sensors and cameras.
+**Doctrine**  
+BGUs accumulate only through uninterrupted continuity.  
+BGUs have no meaning, value, or transferability outside their role in qualifying state transition.
 
-### Laboratory Witness
-Soil, eDNA, and biophysical assays.
+**Binding**  
+BGUs accumulate only when the Ecological Boolean Gate reports **Protected**.
 
-### Human Witness
-Named rangers, transects, and observers.
-
-### AI (Coherence Layer)
-Performs contradiction and consistency checks. AI is not a witness and holds no authority.
-
----
-
-## Use, Extraction & Ethics
-
-### Subsistence Use
-Legitimate extraction exercised within declared ecological and cultural bounds under recognised authority.
-
-### Market Leakage
-Extraction that escapes subsistence bounds or converts survival use into market depletion. Market leakage collapses Protection.
-
-### Pressure Class
-A declared tier that increases verification intensity and obligation without softening thresholds.
+**Cross-References**  
+- Gated by: `PoP`  
+- Accumulates into: `BDR`  
+- Witness legitimacy anchored in: `CATOS`
 
 ---
 
-## Financial Doctrine
+## Proof of Protection (PoP)
 
-### Alignment Bond
-A negative-yield participation mechanism that binds capital to obligation without entitlement, yield, or authority.
+**Definition**  
+Proof of Protection recognises that a defined ecological state did not cross a failure threshold during a declared stress window.
 
-### Obligation Pool
-A financial pool that allocates burden for protection and continuity. It does not back or reference BDR.
+**Doctrine**  
+PoP recognises restraint, not effort.  
+One verified failure collapses Protection for the interval.
 
-### Membrane
-The boundary where u-Kama interfaces with external financial systems without allowing reverse influence.
+**Binding**  
+PoP functions as a Boolean gate on BGU validity.
 
----
-
-## Canonical Distinctions
-
-### Land is a Reality
-Land exists independently of title, token, or law.
-
-### Permissions are Not Realities
-Title, NFTs, and ROUs are permissions that may change without altering ecological truth.
-
-### Seasons Are Tests
-Time is not an invoice. Continuity must survive stress to be recorded.
+**Cross-References**  
+- Drives: `BGU` accumulation  
+- Constrains: `PoR`, `BDR`
 
 ---
 
-## Glossary Axiom (Fixed)
+## Proof of Regeneration (PoR)
 
-**Words become language, language becomes code, code becomes law.**
+**Definition**  
+Proof of Regeneration recognises net ecological state improvement that persists across a declared stress window.
+
+**Doctrine**  
+Effort, intent, and expenditure have no standing without persistence.
+
+**Binding**  
+PoR is recognised only within uninterrupted Protection.
+
+**Cross-References**  
+- Requires: `PoP`  
+- Enables stage transitions in: `BDR`
 
 ---
 
-## Change Log
+## Bio Dynamic Regeneration (BDR)
 
-- **v1.0 (2026-02-25):** Initial canonical glossary freeze.
+**Definition**  
+Bio Dynamic Regeneration (BDR) is the recorded accumulation of verified ecological continuity and regeneration over time, functioning as a non-financial ecological reserve and memory.
+
+**Doctrine**  
+BDR does not promise delivery.  
+It records ecological truth that has persisted under stress.
+
+**Binding**  
+BDR advances only upon consecutive validated BGUs meeting stage and activation requirements.
+
+**Cross-References**  
+- Accumulates from: `BGU`  
+- Constrained by: `PoP`, `PoR`  
+- Legitimacy anchored in: `CATOS`
 
 ---
 
-## Supersession
+## Canonical Constraint
 
-This document supersedes all prior informal glossaries, drafts, notes, and explanations.  
-Future versions must explicitly state which sections are amended.
+u-Kama does not optimise for throughput or activity.  
+It optimises for continuity under constraint.
+
+---
+
+## Versioning
+
+- Status: **Canonical**
+- Authority: u-Kama Doctrine
+- Modification: Not permitted without explicit canonical revision
