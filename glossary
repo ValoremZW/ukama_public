@@ -1,15 +1,24 @@
-# u-Kama Glossary (Canonical)
+# u-Kama Canonical Glossary
 
-> **Glossary Axiom**  
+Copyright © 2026 u-Kama. All rights reserved.
+
+This document contains proprietary doctrinal language and structural definitions forming part of the u-Kama Canonical Corpus.  
+No reproduction, modification, derivative use, or redistribution is permitted without explicit written authorisation.
+
+---
+
+> Glossary Axiom  
 > Words become language.  
 > Language becomes code.  
 > Code becomes law.
 
-This glossary defines canonical terms used within the u-Kama corpus.  
-Definitions are normative and binding.  
+This glossary defines binding terminology used within the u-Kama system architecture.  
+Definitions are normative and govern protocol interpretation.  
 Where ambiguity arises, doctrine prevails over optimisation.
 
 ---
+
+# I. Foundational Doctrine
 
 ## Community as the Operating System (CATOS)
 
@@ -21,52 +30,66 @@ Community is not a stakeholder layer.
 It is the execution layer.  
 Technology, finance, and governance function only as support processes to CATOS, never as substitutes.
 
-**Cross-References**  
-- Human witness authority: `BGU`  
-- Legitimacy and restraint logic: `PoP`, `PoR`  
-- Long-term continuity memory: `BDR`
+**System Relevance**  
+Anchors human witness legitimacy within BGU validation and PoP/PoR evaluation.
 
 ---
 
 ## Ecological Boolean Gate
 
 **Definition**  
-The Ecological Boolean Gate is the binary state system governing ecological truth within u-Kama. At each declared stress window, an ecological unit is evaluated as either:
+The Ecological Boolean Gate is the binary state evaluation mechanism governing ecological truth. At each declared stress window, an ecological unit is classified as:
 
-- **Protected** or **Not Protected**  
-- **Regenerating** or **Not Regenerating**
+- Protected or Not Protected  
+- Regenerating or Not Regenerating  
 
-No intermediate, averaged, probabilistic, or compensatory states are permitted.
+No intermediate, averaged, compensatory, or probabilistic states are permitted.
 
 **Doctrine**  
-Protection functions as a gate on continuity.  
-Regeneration is recognised only within continuity.  
+Protection gates continuity.  
+Regeneration recognises improvement only within continuity.  
 Failure collapses forward progression but never rewrites past recorded truth.
 
-**Cross-References**  
-- Governs: `PoP`, `PoR`  
-- Gates accumulation: `BGU`  
-- Constrains advancement: `BDR`
+**System Binding**  
+Controls PoP and PoR outcomes.  
+Gates BGU accumulation.  
+Constrains BDR advancement.
 
 ---
+
+# II. Protection Layer
 
 ## Protection
 
 **Definition**  
-Protection is the persistence of a defined ecological state across a declared stress window without crossing a defined failure threshold.
+Protection is the persistence of a defined ecological state across a declared stress window without crossing a declared failure threshold.
 
 **Doctrine**  
 Protection recognises restraint, not activity.  
 Effort, expenditure, intent, and enforcement have no independent standing.
 
-**Binding**  
-Protection is evaluated through the Ecological Boolean Gate and functions as a prerequisite for BGU accumulation.
-
-**Cross-References**  
-- Evaluated by: `PoP`  
-- Gates: `BGU`, `BDR`
+**Operational Binding**  
+Evaluated through the Ecological Boolean Gate.  
+Prerequisite for BGU accumulation.
 
 ---
+
+## Proof of Protection (PoP)
+
+**Definition**  
+Proof of Protection recognises that no defined failure threshold was crossed during a declared stress window.
+
+**State Logic**  
+If failure threshold crossed → Not Protected.  
+If not crossed → Protected.
+
+**System Effect**  
+Protected → BGU eligible.  
+Not Protected → Continuity collapse for that interval.
+
+---
+
+# III. Regeneration Layer
 
 ## Regeneration
 
@@ -75,16 +98,66 @@ Regeneration is a positive ecological state transition that persists across a de
 
 **Doctrine**  
 Net zero does not constitute failure, but it represents the worst acceptable outcome before failure.  
-Improvement claims that do not persist under stress are not recognised.
+Improvement must persist under stress to be recognised.
 
 **Binding**  
-Regeneration is recognised only where Protection holds.
-
-**Cross-References**  
-- Recognised by: `PoR`  
-- Constrains: `BDR` advancement
+Recognised only where Protection holds.
 
 ---
+
+## Proof of Regeneration (PoR)
+
+**Definition**  
+Proof of Regeneration recognises verified net ecological improvement that persists across a declared stress window.
+
+**State Logic**  
+Improvement threshold crossed AND Protected → Regenerating.  
+Otherwise → Not Regenerating.
+
+**System Effect**  
+Enables BDR stage transition eligibility.  
+Has no standing outside uninterrupted Protection.
+
+---
+
+# IV. Time and Continuity Layer
+
+## Base Granular Unit (BGU)
+
+**Definition**  
+A Base Granular Unit is a witnessed interval of ecological time that remained intact under defined stress and restraint conditions.
+
+**Doctrine**  
+BGUs accumulate only through uninterrupted Protection.  
+BGUs have no meaning, value, or transferability outside qualifying state transition.
+
+**Accumulation Rule**  
+Protected → BGU increments.  
+Not Protected → BGU continuity resets.
+
+---
+
+# V. Reserve Layer
+
+## Bio Dynamic Regeneration (BDR)
+
+**Definition**  
+Bio Dynamic Regeneration is the recorded accumulation of validated ecological continuity and regeneration over time, functioning as a non-financial ecological reserve and ecological memory.
+
+**Doctrine**  
+BDR does not promise delivery.  
+It records ecological truth that has persisted under stress.  
+It exists independently of market valuation.
+
+**Advancement Rule**  
+BDR advances only upon consecutive validated BGUs meeting activation thresholds.
+
+**Constraint Clause**  
+BDR must never become responsive to capital demand, pricing signals, liquidity pressure, or market stress.
+
+---
+
+# VI. Failure
 
 ## Failure
 
@@ -92,97 +165,30 @@ Regeneration is recognised only where Protection holds.
 Failure is a verified transition across a declared ecological failure threshold within a stress window.
 
 **Doctrine**  
-Failure collapses continuity.  
-Failure does not erase prior recorded ecological truth.
+Failure collapses continuity forward.  
+Failure does not erase past validated ecological truth.
 
-**Cross-References**  
-- Collapses: `PoP`, `BGU` continuity  
-- Blocks forward movement in: `BDR`
-
----
-
-## Base Granular Unit (BGU)
-
-**Definition**  
-A Base Granular Unit (BGU) is a witnessed interval of ecological time that remained intact under defined stress and restraint conditions.
-
-**Doctrine**  
-BGUs accumulate only through uninterrupted continuity.  
-BGUs have no meaning, value, or transferability outside their role in qualifying state transition.
-
-**Binding**  
-BGUs accumulate only when the Ecological Boolean Gate reports **Protected**.
-
-**Cross-References**  
-- Gated by: `PoP`  
-- Accumulates into: `BDR`  
-- Witness legitimacy anchored in: `CATOS`
+**System Effect**  
+Collapses PoP for the interval.  
+Resets BGU continuity.  
+Blocks BDR advancement for that sequence.
 
 ---
 
-## Proof of Protection (PoP)
-
-**Definition**  
-Proof of Protection recognises that a defined ecological state did not cross a failure threshold during a declared stress window.
-
-**Doctrine**  
-PoP recognises restraint, not effort.  
-One verified failure collapses Protection for the interval.
-
-**Binding**  
-PoP functions as a Boolean gate on BGU validity.
-
-**Cross-References**  
-- Drives: `BGU` accumulation  
-- Constrains: `PoR`, `BDR`
-
----
-
-## Proof of Regeneration (PoR)
-
-**Definition**  
-Proof of Regeneration recognises net ecological state improvement that persists across a declared stress window.
-
-**Doctrine**  
-Effort, intent, and expenditure have no standing without persistence.
-
-**Binding**  
-PoR is recognised only within uninterrupted Protection.
-
-**Cross-References**  
-- Requires: `PoP`  
-- Enables stage transitions in: `BDR`
-
----
-
-## Bio Dynamic Regeneration (BDR)
-
-**Definition**  
-Bio Dynamic Regeneration (BDR) is the recorded accumulation of verified ecological continuity and regeneration over time, functioning as a non-financial ecological reserve and memory.
-
-**Doctrine**  
-BDR does not promise delivery.  
-It records ecological truth that has persisted under stress.
-
-**Binding**  
-BDR advances only upon consecutive validated BGUs meeting stage and activation requirements.
-
-**Cross-References**  
-- Accumulates from: `BGU`  
-- Constrained by: `PoP`, `PoR`  
-- Legitimacy anchored in: `CATOS`
-
----
-
-## Canonical Constraint
+# VII. Canonical System Constraint
 
 u-Kama does not optimise for throughput or activity.  
 It optimises for continuity under constraint.
 
+Protection is a Boolean gate.  
+Regeneration is a Boolean recognition within that gate.  
+Time accumulates only when truth survives stress.
+
 ---
 
-## Versioning
+# Version Control
 
-- Status: **Canonical**
-- Authority: u-Kama Doctrine
-- Modification: Not permitted without explicit canonical revision
+Status: Canonical  
+Authority: u-Kama Doctrine  
+Modification: Requires explicit doctrinal revision  
+Jurisdiction: Governed by the Canonical Corpus of u-Kama
