@@ -186,6 +186,104 @@ Time accumulates only when truth survives stress.
 
 ---
 
+# u-Kama Glossary + State Machine Index (Canonical)
+
+> Words become language.  
+> Language becomes code.  
+> Code becomes law.
+
+This document binds terminology directly to executable state logic.
+Each term links to the protocol section where it becomes operational.
+
+---
+
+# I. Core Doctrine Terms
+
+## Community as the Operating System (CAOS)
+
+**Definition**  
+CAOS recognises community as the execution layer through which ecological continuity is maintained.
+
+**Operational Relevance**
+- Influences: [PoP](./pop.md), [PoR](./por.md)
+- Determines human witness authority in [BGU](./bgu.md)
+- Anchors legitimacy of [BDR](./bdr.md)
+
+---
+
+## Ecological Boolean Gate
+
+**Definition**  
+Binary state evaluation at each stress window:
+
+- Protected / Not Protected
+- Regenerating / Not Regenerating
+
+No gradients permitted.
+
+---
+
+# II. Protection Layer
+
+## Protection
+
+**Definition**  
+Persistence of defined ecological state across a declared stress window without crossing a failure threshold.
+
+**Boolean Condition**
+
+# u-Kama Glossary + State Machine Index (Canonical)
+
+> Words become language.  
+> Language becomes code.  
+> Code becomes law.
+
+This document binds terminology directly to executable state logic.
+Each term links to the protocol section where it becomes operational.
+
+---
+
+# I. Core Doctrine Terms
+
+## Community as the Operating System (CAOS)
+
+**Definition**  
+CAOS recognises community as the execution layer through which ecological continuity is maintained.
+
+**Operational Relevance**
+- Influences: [PoP](./pop.md), [PoR](./por.md)
+- Determines human witness authority in [BGU](./bgu.md)
+- Anchors legitimacy of [BDR](./bdr.md)
+
+---
+
+## Ecological Boolean Gate
+
+**Definition**  
+Binary state evaluation at each stress window:
+
+- Protected / Not Protected
+- Regenerating / Not Regenerating
+
+No gradients permitted.
+
+**State-Machine Location**
+- Core evaluation logic: [state-machine.md](./state-machine.md)
+- Gate for: [PoP](./pop.md)
+- Constraint for: [PoR](./por.md)
+- Accumulation condition for: [BGU](./bgu.md)
+
+---
+
+# II. Protection Layer
+
+## Protection
+
+**Definition**  
+Persistence of defined ecological state across a declared stress window without crossing a failure threshold.
+
+**Boolean Condition**
+
 # Version Control
 
 Status: Canonical  
