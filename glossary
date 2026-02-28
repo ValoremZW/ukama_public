@@ -156,6 +156,24 @@ BDR advances only upon consecutive validated BGUs meeting activation thresholds.
 BDR must never become responsive to capital demand, pricing signals, liquidity pressure, or market stress.
 
 ---
+## BIO — Canonical Definition (Hard Lock)
+
+**BIO** is the coordination asset of the u-Kama system.
+
+BIO permits participation in system processes that occur at the membrane between external funding and internal ecological constraint. It enables access, obligation, validation, and interaction within u-Kama under strictly defined rules.
+
+BIO:
+- Is not an ecological asset
+- Does not represent ecological value
+- Does not back, reference, or secure Bio Dynamic Regeneration (BDR)
+- Does not confer ownership, entitlement, or governance authority
+- Is issued only after ecological time has survived defined stress intervals
+- Is subordinate at all times to Proof of Protection (PoP), Proof of Regeneration (PoR), and Ecological Difficulty Adjustment (EDA)
+
+BIO may be accessed only through approved participation pathways and remains revocable, non-guaranteed, and rule-bound.
+
+BIO exists to coordinate behaviour under constraint, not to financialise ecological truth.
+
 
 # VI. Failure
 
