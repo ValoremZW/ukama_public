@@ -33,7 +33,7 @@ Byzantine consensus decides which proposed statement the network accepts as true
 Truth is proposed. The network chooses among competing proposals.
 
 u-Kama
-u-Kama does not select among truth proposals.
+u-Kama does not select among truth proposals. Persistence through time exposes reality.
 
 Canonical distinction:
 u-Kama does not accept truth proposals at all; it only recognises what reality has not disproven through time.
@@ -93,7 +93,6 @@ u-Kama uses meaningful, place-bound work to secure local ecological truth.
 VI. Security Threat Model
 
 Bitcoin’s risk:
-
 Hash power centralisation
 AI compute diversion (intelligence replacing anti-meaning)
 Energy arbitrage
@@ -112,20 +111,16 @@ Distributed restraint, not distributed optimisation.
 VII. Nature of Truth
 
 Bitcoin:
-
 Truth is ledger state finality.
 
 u-Kama:
-
 Truth is ecological continuity under stress.
 
 We locked:
-
 Byzantine consensus decides which proposed statement the network accepts as true.
 u-Kama does not accept truth proposals at all; it only recognises what reality has not disproven through time.
 
 And further:
-
 Consensus by endurance is established only by that which is witnessed to persevere under defined stress conditions across time.
 
 VIII. Final Academic Compression
