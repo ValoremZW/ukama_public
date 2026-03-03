@@ -1,3 +1,20 @@
+u-Kama
+Oracle Justification and Metric Design Rationale
+Version 1.0 – Governance & Architecture Memorandum
+1. Purpose of This Document
+This document justifies:
+1. Which oracle classes are currently recognised within u-Kama.
+2. Why each oracle is necessary and sufficient.
+3. Why core system metrics are defined as they are.
+4. How these metrics align with ecological constraint rather than financial
+optimisation.
+5. How each metric maps to Protection (PoP), Base Granular Units (BGUs),
+and BDR state transitions.
+u-Kama does not optimise for data abundance. It optimises for truth under
+constraint.
+
+Full document available on request  stuart.beverley@proton.me
+
 File sha256 hash: 5174178c1ba82ad96e6610f44299495d86d9cb3c04668f8fdccd2ee780b84713
 Timestamp:
 append fadd5701b5d2dea4358de82fa5f91e2c
