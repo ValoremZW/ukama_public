@@ -1,0 +1,181 @@
+State Machines
+Why three state machines exist
+One machine cannot do three morally different jobs without category
+confusion.
+PoRH exists for deliberate human application (rehabilitation, scaffolding,
+restraint under active management). It records protection achieved
+through human effort, but it does not claim that nature can now stand on
+its own.
+PoP exists for withdrawal and exposure. It tests whether ecological
+continuity holds when support is removed and stress arrives. PoP is the
+gate that makes ecological truth non-forgeable.
+PoR exists for directional improvement under uninterrupted Protection. It
+refuses “effort as progress” and recognises only net state improvement
+that persists across stress intervals.
+This separation enforces the core doctrine: money may settle obligation, but
+only time under stress settles truth.
+Shared architecture across PoP , PoRH, PoR
+1) Seasonal endpoints as the clock
+All three machines advance only at declared seasonal endpoints
+(observational witness via the Boolean Seasonal Gate). This prevents gaming
+through calendar timing and enforces comparable system states.
+2) Boolean gates, nuance above
+At the protocol layer, each season resolves as a Boolean outcome per gate:
+PASS or FAIL only.
+Nuance, narrative, and diagnostics live above the state machine. This
+keeps settlement crisp and contestable.
+3) Trias Testium as the truth filter
+Each seasonal resolution is adjudicated through three independent, non-
+sovereign witness classes:
+Observational
+Laboratory
+Human
+Contradiction rule (hard): incompatible Boolean resolution of the same
+declared gate across independent witnesses collapses continuity or increases
+constraint. Contradiction never selects truth and never rewrites history.
+4) BGUs and EVUs are qualification plumbing
+BGU: a witnessed interval of ecological time that remained intact under
+declared stress and restraint conditions.
+EVU: protocol-level verification record that attests successful witnessing of
+BGUs.
+BGUs accumulate only through uninterrupted continuity. EVUs qualify those
+BGUs for state transitions. Neither has meaning outside qualification.
+5) EDA and Pressure Class scale burden, not outcomes
+Pressure Class and Ecological Difficulty Adjustment increase:
+witnessing intensity
+audit frequency
+obligation requirements
+qualification window length
+They never soften PASS thresholds.
+Machine 1: PoRH State Machine (Protection under Human
+Application)
+Purpose
+PoRH is the lawful place for:
+FMNR, Justdiggit-style scaffolding
+active restoration and rehabilitation
+anti-poaching and boundary enforcement under management
+community agriculture cells operating within declared subsistence bounds
+(if ex ante declared)
+PoRH says: “Humans are holding the line.
+”
+It does not say: “The ecosystem can now hold the line.
+”
+States
+PoRH.INACTIVE: cell not enrolled in PoRH.
+PoRH.ACTIVE: active rehabilitation or applied protection underway.
+PoRH.VALIDATED(season): season passed PoRH gates, EVUs minted for the
+season.
+PoRH.FAIL: season failed or contradiction occurred; continuity resets for
+PoRH accounting.
+Transition logic (conceptual)
+INACTIVE → ACTIVE when the cell declares PoRH plan, roles, methods, and
+dependency layers ex ante.
+ACTIVE → VALIDATED at seasonal endpoint if PoRH gates PASS under Trias
+Testium.
+ACTIVE/VALIDATED → FAIL if any gate FAILs or contradiction occurs.
+Key doctrine constraints
+PoRH can run for years without implying PoP eligibility.
+PoRH is where “exogenous engineering” may occur only as transitional
+facilitation that can be withdrawn without collapse.
+PoRH replaces baselines with responsibility thresholds: you are not
+compared to “what once was,” you are compared to what you must now
+hold.
+Machine 2: PoP State Machine (Protection under Withdrawal
+and Stress)
+Purpose
+PoP is the Withdrawal Test made operational.
+PoP asks one thing: did ecological entropy fail to accelerate across declared
+stress windows after intervention was withdrawn?
+If yes, ecological time remains intact (BGUs accumulate). If no, continuity
+collapses.
+PoP is therefore the backbone of BDR as ecological memory.
+States
+PoP .NOT_ELIGIBLE: cell has not satisfied withdrawal prerequisites.
+PoP .WITHDRAWAL_PENDING: withdrawal declared but not yet complete or
+not yet observed through an endpoint.
+PoP .QUAL_WINDOW(k): in the k-th consecutive season of PoP qualification
+(BGUs accumulating).
+PoP .PASS_LOCKED: minimum consecutive window achieved (PoP-qualified
+for BDR advancement gating).
+PoP .FAIL: any seasonal failure or contradiction collapses continuity for the
+window and resets k.
+PoP .OUT
+_
+OF_SERVICE: disturbance declared (e.g., extraction) suspends
+ecological time accounting for the cell.
+Transition guards
+NOT_ELIGIBLE → WITHDRAWAL_PENDING when withdrawal is declared and
+enforceable.
+WITHDRAWAL_PENDING → QUAL_WINDOW(1) at first seasonal endpoint
+after withdrawal if PoP PASS.
+QUAL_WINDOW(k) → QUAL_WINDOW(k+1) if PASS again.
+QUAL_WINDOW(k) → FAIL if any FAIL or contradiction.
+FAIL → WITHDRAWAL_PENDING or QUAL_WINDOW(1) depending on
+whether withdrawal still holds and whether re-entry requirements are met.
+ANY → OUT
+_
+OF_SERVICE when disturbance is declared (Access Bond posted
+ex ante if extractive).
+OUT
+_
+OF_SERVICE → WITHDRAWAL_PENDING after rehabilitation and
+withdrawal are complete; then requalification begins.
+Why PoP must be Boolean
+If PoP were scored, averaged, or negotiated, it becomes finance-friendly.
+Finance then pressures the score. The system would quietly drift from truth to
+narrative. Boolean gates are the simplest defence.
+Machine 3: PoR State Machine (Regeneration under
+Uninterrupted Protection)
+Purpose
+PoR recognises only net ecological state improvement that:
+1. occurs under uninterrupted PoP , and
+2. persists across stress intervals.
+PoR is not “activity.” It is not “spend.” It is not “intent.
+”
+It is directional improvement that reality did not disprove.
+States
+PoR.LOCKED: cannot even be evaluated unless PoP continuity holds.
+PoR.OBSERVING: monitoring improvement criteria across seasons while
+PoP continues.
+PoR.UPGRADE_ELIGIBLE: sustained directional improvement achieved
+across required windows.
+PoR.UPGRADED: PoR state transition recorded (this can trigger BDR stage
+transition if other guards hold).
+PoR.FAIL: either PoP continuity failed (automatic PoR collapse), or
+improvement criteria not met (no upgrade, but not necessarily a “failure” if
+PoP still holds).
+Dependency on PoP
+PoR is strictly subordinate:
+If PoP collapses, PoR collapses.
+If PoP holds but PoR does not improve, you may remain protected without
+claiming regeneration.
+This prevents “regeneration theatre.
+”
+How they combine to advance BDR
+Think of BDR as a stage machine that listens to PoP and PoR outputs.
+BDR states (minimal)
+BDR.STAGE_0: no recorded continuity yet.
+BDR.STAGE_1..n: increasing ecological maturity and constraint.
+BDR.HALT: contradiction or unresolved ambiguity pauses advancement
+(time must judge).
+Advancement rule (conceptual)
+BDR advances only when:
+1. PoP has achieved the required consecutive qualification window (BGUs
+intact, EVUs present).
+2. PoR has achieved the required sustained improvement window for the
+target stage, if stage requires regeneration.
+3. No contradictions exist under Trias Testium for any declared gate.
+4. All declared dependency layers resolve as required (critical failures gate
+PoP , important failures block PoR upgrades, observational failures are
+recorded only).
+Why BDR must not hard-cap per site
+BDR issuance tightens asymptotically as integrity rises. Scarcity emerges from
+ecological success, not administration. This is why EDA exists.
+Design justification in one coherent chain
+PoRH allows honest work without pretending it is truth.
+PoP forces exposure and makes truth expensive to claim.
+PoR allows improvement claims only when protection already holds, and
+only when improvement survives stress.
+BDR records the accumulated result as ecological memory, indifferent to
+markets, and increasingly constrained by maturity through EDA.
+Or in the u-Kama idiom: the seasons are not invoices. They are tests.
