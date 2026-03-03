@@ -1,0 +1,15 @@
+File sha256 hash: 5174178c1ba82ad96e6610f44299495d86d9cb3c04668f8fdccd2ee780b84713
+Timestamp:
+append fadd5701b5d2dea4358de82fa5f91e2c
+sha256
+append 593cc07b1c5065d6ad33eeafe7968920
+sha256
+prepend 92dad576d1ec2214f9e2110677d10a6cdcd22be9d3f4c537d71c419baa881891
+sha256
+append ef4b301385a43cb00b6bd693af179909da65be04b94be0fc0f75d7b39eda0cd0
+sha256
+append cad1003f8a4e75fa4e91ec90e57af2db71056919da342c27907f8530abeb36c8
+sha256
+prepend 69a6ab9c
+append c8a702cb8f39105f
+verify PendingAttestation('https://finney.calendar.eternitywall.com')
