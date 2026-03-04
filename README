@@ -1,23 +1,105 @@
-u-Kama: Putting Ecology Back Where Money Forgot It
-Draft Non-Technical Whitepaper
-Copyright © u-Kama Foundation
+Defensive Public Disclosure (Controlled)
 
-Something subtle but serious is broken in how modern economies relate to the living world. 
-It is not that people do not care. It is that money learned to move faster than consequences.
-Every monetary system creates a gap between action and outcome. Value is released now. 
-Reality answers later. That gap rewards short-term gain and defers responsibility.
-Money does not arrive everywhere at once. It enters through doors. Those closest to issuance
-benefit first. Those closest to land, water, and animals absorb the cost later.
-Once abstracted, capital moves toward speed and scale. Living systems do not. When these worlds
-collide, capital keeps moving and ecosystems absorb the shock.
-Most modern systems issue value first and ask for proof later. Ecology cannot tolerate this order.
-Damage comes before verification. Ecology recognises only what survives.
-u-Kama begins with a refusal: ecological truth must never do financial work. Finance must adapt
-around ecological reality, not the other way around.
-We do not price nature. We recognise it as the priceless substrate upon which all value depends.
-Ecology is not an input. It is the condition.
-The name u-Kama comes from Southern African languages where ukama refers to kinship,
-relationship, and mutual belonging. It describes a condition of being bound into relationship with
-land, people, and time.
-u-Kama is not about ownership or control. It is about remaining in right relationship under
-constraint
+Purpose
+This document constitutes a Defensive Public Disclosure for the u-Kama system. Its sole purpose is to establish prior articulation of core architectural principles, terminology, and separation doctrine in order to prevent downstream novelty capture, enclosure, or misattribution.
+This disclosure is intentionally incomplete. It describes what the system is and must be, without revealing implementation details, parameter values, algorithms, thresholds, or operational procedures.
+
+⸻
+
+System Overview
+u-Kama is a place-bound ecological continuity system designed to protect and regenerate natural systems under real biophysical constraints, while preventing the financialisation of ecological truth.
+The system reverses the conventional conservation-finance relationship:
+• Ecology constrains economics.
+• Economics funds continuity without commanding outcomes.
+• Finance absorbs volatility; ecological truth remains indifferent.
+u-Kama is not a market for nature, credits, offsets, or biodiversity units.
+It is a constraint-based coordination system that records what ecosystems have survived through time.
+
+⸻
+
+2. Core Architectural Separation
+u-Kama is defined by hard separations. These separations are doctrinal, not configurable.
+2.1 Ecological Truth vs Economic Activity
+• Ecological state is recognised only after persistence through time and stress.
+• Economic activity may occur around this truth but never determines it.
+• No price, demand signal, or funding requirement may influence ecological recognition.
+2.2 Dual-Layer Token Architecture
+• BDR (Bio Dynamic Regeneration)
+A non-financial ecological reserve and memory record.
+BDR does not circulate, price, yield, collateralise, or back anything.
+• BIO (BioDollar)
+A utility and participation layer used for coordination, access, obligation, and funding flows.
+BIO absorbs all economic volatility and stress.
+No peg, ratio, redemption right, or valuation linkage may exist between BDR and BIO.
+2.3 Cashflow vs Reserve Separation
+• Operational cashflows are strictly separated from ecological reserves.
+• Ecological reserves cannot be drawn down, leveraged, or referenced to justify issuance.
+• Funding shortages must result in contraction, not dilution of ecological truth.
+
+⸻
+
+3. Proof Doctrine (High Level)
+
+u-Kama recognises ecological outcomes through state-based proofs, not continuous scores.
+
+3.1 Proof of Protection (PoP)
+• Recognises restraint and continuity, not activity.
+• Determines whether a witnessed interval of ecological time remains intact under stress.
+3.2 Proof of Regeneration (PoR)
+• Recognises only net ecological state improvement that persists across defined stress intervals.
+
+Proofs function as Boolean state transitions at the protocol layer.
+Nuance exists above the protocol, never inside it.
+
+⸻
+
+4. Witnessing and Legitimacy
+
+u-Kama does not decide truth by proposal, vote, or consensus.
+Truth is recognised only when it survives time.
+Legitimacy arises through Trias Testium – the Principle of Independent Witnesses:
+• One witness that records and remembers.
+• One witness that interprets context.
+• One witness that contests coherence.
+No witness may be sovereign.
+No witness may unilaterally assert truth.
+
+⸻
+
+5. Participation Without Extraction
+
+Participation in u-Kama does not confer ownership, entitlement, or authority.
+• Land is never sold, tokenised as property, or abstracted from place.
+• Access remains permissioned, custodial, and revocable.
+• Participation is qualified by endurance under constraint, not capital deployed.
+Alignment mechanisms are designed to filter extractive actors, not reward speed or scale.
+
+⸻
+
+6. Explicit Exclusions
+
+This disclosure explicitly excludes:
+• Algorithms, thresholds, or parameter values
+• Issuance formulas or schedules
+• Verification methods or data pipelines
+• Governance procedures or dispute resolution mechanics
+• Smart contract logic or system topology
+• Commercial agreements, partnerships, or jurisdictional structures
+These remain protected as operational doctrine and implementation knowledge.
+
+⸻
+
+7. Intended Use of This Disclosure
+
+This document is published to:
+• Establish prior articulation of the u-Kama architecture
+• Prevent patenting or enclosure of core concepts
+• Anchor future work to a defined doctrinal baseline
+• Enable critique without enabling capture
+It is not a whitepaper, prospectus, or technical specification.
+
+⸻
+
+Citation and Freeze Notice
+
+Canonical doctrine freeze v1.0, dated 21 February 2026.
