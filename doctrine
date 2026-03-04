@@ -1,4 +1,19 @@
 u-Kama Doctrine Backup, Pre Pseudocode Edition
+
+File sha256 hash: 34e8cdef6f76ab374394c07276b4773abbacfdd4c0ef6bca8b46c86ff1e23e28
+Timestamp:
+append 06319997be0cda8455b0cb36902a145b
+sha256
+append 979b0e662526566dadcd65119992ec12
+sha256
+prepend a827704a9ca1f2ad22e87d911882e9f3ffd31c1618a33700176ab26bdae77f7d
+sha256
+append f730a03e0a5d06f75962e4f95ec364d0eec715e6faef97907909f1eeab71ba38
+sha256
+prepend 69a6a9ba
+append a8b0b880beb12371
+verify PendingAttestation('https://finney.calendar.eternitywall.com')
+
 Document metadata
 System name: u-Kama (legacy reference: BioDollar)
 Primary purpose: Coordinate human economic activity under ecological constraint.
