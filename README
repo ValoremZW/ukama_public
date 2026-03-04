@@ -4,6 +4,24 @@ Purpose
 This document constitutes a Defensive Public Disclosure for the u-Kama system. Its sole purpose is to establish prior articulation of core architectural principles, terminology, and separation doctrine in order to prevent downstream novelty capture, enclosure, or misattribution.
 This disclosure is intentionally incomplete. It describes what the system is and must be, without revealing implementation details, parameter values, algorithms, thresholds, or operational procedures.
 
+____
+
+File sha256 hash: f0556e0435ca5864c5e9859f4e01157d1e1ffb5567d918cc8e09fe8b2c9c8e3d
+Timestamp:
+append 75d3428958409296b3553ce7aeb3b449
+sha256
+append c3d990b56129807ddb04a9f7b070a00e
+sha256
+append b0f6dfdde30047b5bc7c99dabb1b8f632f3b1686a3498e7f8c45a9b5e808b522
+sha256
+prepend ff5682d8da65df71963c4c7834acdfd4353f3fda19db8e7696989aeac9d381c9
+sha256
+append 79b42d5b0560b00f7b810ce70805ac799960dc590fdbf5a1171fa975adcef7e2
+sha256
+prepend 69a84baf
+append 4b4ba7cafd06787b
+verify PendingAttestation('https://finney.calendar.eternitywall.com')
+
 ⸻
 
 System Overview
