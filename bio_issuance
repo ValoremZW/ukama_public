@@ -184,3 +184,15 @@ under the current reference issuance curve.
 | 8     | 34                      | 17.0         | 0.618               | 29412            | 2312287        |
 | 9     | 55                      | 27.5         | 0.618               | 18182            | 2330469        |
 | 10    | 89                      | 44.5         | 0.618               | 11236            | 2341705        |
+
+File sha256 hash: 44bf00cd143b1b72b0d46ffe16bd314d008564441c7c079336264b511151cedc
+Timestamp:
+append 015d6a0f3d63f6d63391e5ea2bfd963f
+sha256
+append efe151eae44f34603825b795dd347155
+sha256
+prepend fff943aad348383a8eba748d18e7311b7964a81d8c39d3f561110e30a9815709
+sha256
+prepend 69a848bf
+append 2612b2661a73a540
+verify PendingAttestation('https://finney.calendar.eternitywall.com')
