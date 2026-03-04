@@ -20,6 +20,27 @@ Issuance only occurs if PoP and PoR state machines qualify at the end of the win
 - Qualification: uninterrupted ecological continuity across the full window
 - Failure handling: failed intervals reset the window; no deferral or compensation
 
+The Combined Maximum Envelope
+
+Combining the three limits:
+
+BIO_{max,total}
+=
+N_{cells}
+\times
+\sum_{n=1}^{\infty}
+\frac{TPP_{year}}{F_{n+1}}
+
+which simplifies approximately to:
+
+BIO_{max,total}
+\approx
+N_{cells}
+\times
+20,000
+
+under the current reference issuance curve.
+
 | Stage | Window (W_k) (seasons) | Approx years | Issuance multiplier | Max BIO issuable | Cumulative BIO |
 |------:|------------------------:|-------------:|--------------------:|-----------------:|---------------:|
 | 1     | 1                       | 0.5          | 1.000               | 1000000          | 1000000        |
