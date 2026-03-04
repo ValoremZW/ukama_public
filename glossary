@@ -1,6 +1,21 @@
 # u-Kama Canonical Glossary
 u-Kama Canonical Glossary
 Backup Consolidation Copy
+
+File sha256 hash: 522a07415c02c3f9bab0774556ef437829a60933e856e6247e055f7ab46be127
+Timestamp:
+append 1429f8dcd21638686d20ef47efabb051
+sha256
+append 7521a6bb061621946c4040f28e314d98
+sha256
+prepend cadfe68a0234c16b5d2b8d3df085f130e4916829b77234f5d2487fba532070d0
+sha256
+prepend 0f22fb350736b60ceea5c272e4ffcd3792c0d687945991ee44f3e3bd4b511606
+sha256
+prepend 69a6aab9
+append 93598eda65757671
+verify PendingAttestation('https://finney.calendar.eternitywall.com')
+
 Core Identity
 u-Kama
 A coordination system that places ecology at the centre of monetary design.
@@ -424,7 +439,7 @@ Each term links to the protocol section where it becomes operational.
 ## Community as the Operating System (CAOS)
 
 **Definition**  
-CAOS recognises community as the execution layer through which ecological continuity is maintained.
+CATOS recognises community as the execution layer through which ecological continuity is maintained.
 
 **Operational Relevance**
 - Influences: [PoP](./pop.md), [PoR](./por.md)
