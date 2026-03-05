@@ -1,21 +1,122 @@
-Trias Natura — Canonical Principle
+# Trias Natura — Epistemology Clause (GitHub Friendly)
 
-A system that seeks truth in nature must rest on three independent legs: memory, measurement, and verification. Remove one, and certainty collapses.
+**Status:** Canonical  
+**Scope:** u-Kama doctrine  
+**Purpose:** Provide a compact, rigorous justification for Trias Natura as the epistemological foundation for recognising truth in nature.
 
-It sits coherently alongside the other triadic structures:
+---
 
-Doctrine
-Three Legs
-Trias Natura: memory • measurement • verification
+## 1. Core Thesis
 
-Tritestium: human witness • observational witness • laboratory witness
+A system that seeks truth in nature must rest on three independent legs: **memory, measurement, and verification**.  
+Remove one, and certainty collapses.
 
-Ecological Gate Logic: PoRH • PoP • PoR
+Trias Natura exists because ecological claims are vulnerable to three failure modes:
 
-Together they form a consistent architecture:
-	•	Memory preserves long-duration observation (culture, stories, precedent).
-	•	Measurement observes the present state (sensors, science, field observation).
-	•	Verification tests endurance through time (Boolean gates, ecological outcomes).
+1. **Contradiction** (the claim cannot be true by its own rules)
+2. **Mismatched reality** (the claim does not correspond to observable state)
+3. **Irrelevance in lived practice** (the claim cannot survive real use under stress)
+
+---
+
+## 2. Properties of Truth in Natural Systems
+
+Truth in nature must be:
+
+- **Coherent** (it makes sense as a whole)
+- **Consistent** (it holds across comparable observations)
+- **Exclusive** (it excludes incompatible states under defined gates)
+
+These properties imply three independent tests.
+
+---
+
+## 3. The Three Tests
+
+### 3.1 Logical Consistency (Non-Contradiction)
+A truth claim must not contradict:
+- itself,
+- declared definitions,
+- declared gates,
+- declared transition guards.
+
+If a claim yields incompatible Boolean resolution under the same declared conditions, the system treats the claim as **failed** or **paused** (depending on declared rules).
+
+**Function:** Prevents truth inflation by narrative or authority.  
+**Failure mode:** Coherent-sounding stories that cannot coexist with the system’s own constraints.
+
+---
+
+### 3.2 Empirical Adequacy (Practical Observation)
+A truth claim must correspond to observable ecological reality under the declared measurement regime.
+
+Empirical adequacy is satisfied only when measurement signals support the claimed state within the declared thresholds and persistence rules.
+
+**Function:** Prevents abstract correctness that does not match reality.  
+**Failure mode:** Elegant models that do not survive contact with the land.
+
+---
+
+### 3.3 Experiential Relevance (Lived Reality Under Stress)
+A truth claim must survive lived, practical engagement with the ecology across time and stress.
+
+Experiential relevance is satisfied only when:
+- stewardship obligations can be enacted,
+- ecological continuity endures across seasonal stress windows,
+- outcomes remain legible to custodians and witnesses in practice.
+
+**Function:** Prevents metrics-only truth that fails in lived stewardship.  
+**Failure mode:** Data that looks good while communities and ecosystems fail.
+
+---
+
+## 4. Mapping to Trias Natura
+
+Trias Natura binds the three tests into three independent supports.
+
+| Trias Natura Leg | Truth Test | What It Prevents |
+|---|---|---|
+| **Memory** | Experiential Relevance | forgetting what endurance looks like in practice |
+| **Measurement** | Empirical Adequacy | drifting into abstraction or narrative |
+| **Verification** | Logical Consistency | contradiction, gaming, or authority-based truth |
+
+**Rule:** A claim is admissible only if it passes **all three**.
+
+---
+
+## 5. Consequences
+
+### 5.1 No Single Leg Can Declare Truth
+- Memory without measurement becomes folklore.
+- Measurement without verification becomes incoherent data.
+- Verification without memory becomes sterile formalism.
+
+Trias Natura requires independence because two supports can collude or drift. Three supports triangulate.
+
+### 5.2 Truth Is Gate-Bound
+Truth recognition is **exclusive**: under declared gates, incompatible states cannot both be true.
+This is why u-Kama uses Boolean state transitions rather than continuous scores.
+
+---
+
+## 6. Cross-References
+
+- **Tritestium:** Three-witness verification framework (Human, Observational, Laboratory). Tritestium is the operational witnessing structure that supplies independent evidence into Trias Natura.
+- **Ecological Boolean Gates:** PoRH, PoP, PoR. These are the operational state gates whose advancement depends on Trias Natura and Tritestium being satisfied.
+- **Three Triads Principle:** Trias Natura (foundation), Tritestium (verification), PoRH/PoP/PoR (operations).
+
+---
+
+## 7. Canonical Compression
+
+**Trias Natura:**  
+Truth must **make sense**, **match reality**, and **survive experience**.
+
+**Axiom (paired):**  
+*The elders used stories. We now use state machines. The land endures.*
+
+---
+
 
 File sha256 hash: 63ad60eee089b7ad75daef19897569a094120d294172ad664aeab65c114e784d
 Timestamp:
