@@ -1,0 +1,11 @@
+Overview
+
+u-Kama uses blockchain infrastructure as the execution and recording layer for ecological truth recognition. The blockchain does not financialise nature. Its function is to provide immutable rails that allow ecological observations, verification events, and state transitions to be recorded transparently across time.
+
+Four architectural functions justify the use of blockchain within u-Kama:
+	1.	Ecological addressing through cell NFTs that represent geographic polygons.
+	2.	Immutable ecological memory through the BGU → EVU → BDR recording pipeline.
+	3.	Deterministic ecological state machines governing PoRH, PoP, and PoR transitions.
+	4.	A distributed coordination layer allowing multiple actors to interact under constraint.
+
+Together these elements allow ecological states to be recognised through rule based verification rather than institutional discretion.
