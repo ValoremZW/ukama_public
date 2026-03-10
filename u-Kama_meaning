@@ -4,3 +4,15 @@ The name u-Kama comes from the Shona word ukama (often written hukama), meaning 
 Similar ideas appear across many indigenous knowledge systems. Among the Ju/’hoansi San, anthropologists describe the concept of n!oresi, a relational bundle connecting people, animals, landscapes, and stories within a particular place. Land is therefore understood not as property but as a living network of obligations.
 The choice of the name u-Kama reflects this relational understanding. It signals that the system is built around continuity of relationships between humans and the living world, rather than around the extraction or financialisation of nature.
 In simple terms, u-Kama recognises that ecological systems endure only when the relationships that sustain them are honoured across generations.
+
+File sha256 hash: 0fae4c5f248a9d9e50f9d4557214bf59adb57a80e24f960baf78bf5f8bc303de
+Timestamp:
+append eedf98a2bddb97ae3a2a256c0a8f2e8b
+sha256
+append aa3451371c3197e210457e4ad17ef525
+sha256
+prepend d00d620e9e2c5ca2154dd721a4604bca677e14c7f4f4cb775d57c794e92705ca
+sha256
+prepend 69b04778
+append ddf4575426bb60fb
+verify PendingAttestation('https://finney.calendar.eternitywall.com')
