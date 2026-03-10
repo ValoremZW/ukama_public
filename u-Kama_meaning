@@ -16,3 +16,14 @@ sha256
 prepend 69b04778
 append ddf4575426bb60fb
 verify PendingAttestation('https://finney.calendar.eternitywall.com')
+
+u-kama.eth registered with tx 0x54E7131B5D6e11480D9EA39c36017e1c38DCA3dC
+and
+0x6a83b507abb93dae61153bf9e0aef62317a2a96794242d762559bf19a4d2d6fe 
+Status:
+Success
+Block:
+24628600
+19 Block Confirmations
+Timestamp:
+(Mar-10-2026 05:36:59 PM UTC)
