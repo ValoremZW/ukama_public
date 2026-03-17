@@ -1,0 +1,158 @@
+u-Kama resolves four classical problems that distributed systems struggle with.
+
+⸻
+
+1. The Byzantine Problem
+
+The Byzantine Generals Problem asks how a network can agree on a statement when some participants may lie.
+
+Most blockchains solve this through economic competition.
+
+Bitcoin uses computational cost.
+Ethereum uses staked collateral.
+
+u-Kama avoids the problem entirely by changing the decision rule.
+
+The system does not attempt to decide which statement is true. It recognises only those ecological states that remain uncontradicted across independent witnesses and time.
+
+In other words:
+
+A dishonest actor cannot win a vote.
+They must defeat reality itself across three independent observation domains.
+
+That is a far harder task.
+
+⸻
+
+2. The Oracle Problem
+
+The oracle problem arises because blockchains cannot directly observe the physical world.
+
+They must trust external data sources.
+
+u-Kama eliminates the concept of a single oracle.
+
+Instead it distributes verification across three independent epistemic domains:
+
+• observational measurement
+• laboratory biological testing
+• human witnesses physically present
+
+These witnesses do not report to the blockchain as authoritative sources.
+
+They function as independent constraints on one another.
+
+Truth emerges only when their observations converge.
+
+⸻
+
+3. The Consensus Problem
+
+Traditional consensus systems answer the question:
+
+Which block history should the network accept.
+
+u-Kama answers a different question:
+
+Has ecological reality disproven this claim.
+
+This shifts the system from consensus to convergence.
+
+Consensus is social agreement.
+Convergence is independent observation producing the same conclusion.
+
+Convergence is much harder to manipulate.
+
+⸻
+
+4. The Verification Problem
+
+Many blockchain systems assume that verification can occur instantly.
+
+Ecological systems operate differently.
+
+Verification requires time under stress.
+
+Rainfall variation, grazing pressure, fire events, and seasonal cycles all act as tests of ecological integrity.
+
+For this reason the protocol recognises ecological state only at seasonal endpoints. This design ensures that ecosystems must survive real environmental variation before a state transition is recognised.
+
+Time therefore becomes a verification mechanism rather than merely a timestamp.
+
+⸻
+
+5. The Decentralisation Problem
+
+Many networks describe themselves as decentralised but rely on a relatively small set of infrastructure providers.
+
+u-Kama decentralises along several dimensions simultaneously.
+
+Landscape decentralisation
+
+Each ecological cell resolves independently. Cells cannot offset one another.
+
+Witness decentralisation
+
+Three distinct witness classes must converge.
+
+Institutional decentralisation
+
+Machines, laboratories, and human observers operate under different institutional structures.
+
+Temporal decentralisation
+
+Verification occurs across multiple seasons rather than single block intervals.
+
+Together these layers create a system where no single actor or institution can determine ecological truth.
+
+⸻
+
+6. The Metric Gaming Problem
+
+Economic systems frequently suffer from Goodhart’s Law.
+
+When a measure becomes a target, it ceases to be a good measure.
+
+u-Kama addresses this through Boolean ecological state gates.
+
+Instead of optimising numerical scores, ecological processes resolve as simple conditions.
+
+For example:
+
+• water cycle functioning or failing
+• nutrients retained or leaking
+• biological community improving or degrading
+• energy capture increasing or declining
+
+This structure prevents optimisation of intermediate metrics while preserving the complexity of ecological measurement in the evidence layer.
+
+⸻
+
+7. The Role of the Blockchain
+
+In this architecture the blockchain does not determine truth.
+
+Its role is much simpler.
+
+The chain records:
+
+• ecological claims
+• witness attestations
+• cryptographic commitments to evidence archives
+• chronological ecological state transitions
+
+The ledger therefore becomes a permanent ecological memory system.
+
+⸻
+
+8. The Result
+
+The outcome is a distributed protocol with an unusual property.
+
+Most blockchain systems establish consensus about digital activity.
+
+u-Kama establishes recognition of physical ecological continuity.
+
+The network does not vote on truth.
+
+It records what reality has not disproven.
