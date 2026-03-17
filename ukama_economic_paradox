@@ -219,3 +219,46 @@ This ensures that ecological reality remains the ultimate constraint on system o
 7. Summary
 
 The architecture of u-Kama addresses several well known systemic failure modes.
+
+#Failure Principle
+Typical Failure Mode
+u-Kama Design Response
+
+Goodhart’s Law
+Metrics become optimisation targets
+Boolean ecological state gates and multi witness verification
+
+Campbell’s Law
+Indicator corruption under incentives
+Separation of ecological verification and financial flows
+
+Ashby’s Law
+Oversimplified control systems
+Multiple witness classes and distributed ecological cells
+
+Principal–Agent
+Incentive misalignment
+Strict role separation
+
+Information Asymmetry
+Hidden ecological conditions
+Independent evidence streams
+
+Moral Hazard
+Insulation from consequences
+Ecological reality determines qualification
+
+Closing Perspective
+
+The architecture of u-Kama does not assume that participants will always behave perfectly.
+
+Instead it assumes that systems must remain robust even when participants attempt to optimise their advantage.
+
+By grounding verification in ecological processes, distributing observation across independent witnesses, and preserving evidence through cryptographic records, the system shifts incentives away from metric manipulation and toward ecological continuity.
+
+In this way the protocol attempts to ensure that the measurement system remains aligned with the reality it is intended to represent.
+
+Ecological truth is therefore not negotiated through metrics.
+
+It is recognised when the land itself continues to function.
+
